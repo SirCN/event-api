@@ -1,0 +1,21 @@
+{
+  "name": "event-server",
+  "description": "A server to receive test events",
+  "author": "Conny Nykvist",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SirCN/event-server"
+  },
+  "dependencies": {
+    "colors": "0.x.x",
+    "express": "4.x.x",
+    "body-parser": "~1.0.1",
+    "mongoose": "~3.8.x"
+  },
+  "devDependencies": {
+    "gulp-nodemon": "1.0.x",
+    "gulp-install": "~0.2.0"
+  },
+  "engine": "node >= 0.10.x"
+}
