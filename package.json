@@ -11,7 +11,8 @@
     "colors": "0.x.x",
     "express": "4.x.x",
     "body-parser": "~1.0.1",
-    "mongoose": "~3.8.x"
+    "mongoose": "~3.8.x",
+    "mail-listener2": "0.1.x"
   },
   "devDependencies": {
     "gulp-nodemon": "1.0.x",
