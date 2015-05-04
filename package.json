@@ -1,22 +1,21 @@
 {
-  "name": "event-server",
+  "name": "event-api",
   "description": "A server to receive test events",
   "author": "Conny Nykvist",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SirCN/event-server"
+    "url": "https://github.com/SirCN/event-api"
   },
   "dependencies": {
-    "colors": "0.x.x",
+    "colors": "1.x.x",
     "express": "4.x.x",
-    "body-parser": "~1.0.1",
-    "mongoose": "~3.8.x",
-    "mail-listener2": "0.1.x"
+    "body-parser": "1.x.x",
+    "mongoose": "~4.x.x"
   },
   "devDependencies": {
-    "gulp-nodemon": "1.0.x",
-    "gulp-install": "~0.2.0"
+    "gulp-nodemon": "2.0.x",
+    "gulp-install": "~0.4.0"
   },
-  "engine": "node >= 0.10.x"
+  "engine": "node >= 0.12.x"
 }
