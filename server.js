@@ -3,7 +3,6 @@
 var express     = require('express'),
 	bodyParser    = require('body-parser'),
 	mongoose      = require('mongoose'),
-	MailListener  = require('mail-listener2'),
 	app           = express(),
 	router        = express.Router();
 
