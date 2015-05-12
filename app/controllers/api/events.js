@@ -15,17 +15,33 @@ exports.get_event = function(req, res){
 			res.send(err);
 		res.send(event);
 	})
-
 };
 
 exports.create_event = function(req, res){
-	var newEvent = Event({
-		testCase:  req.body.testCase,
-		eventType: req.body.type,
-		eventData: req.body.data,
-		eventDate: req.body.date,
-		eventExpire: req.body.expire, 
-	});
+    var eventObject = {
+        scenario: 		req.body.scenario,
+        status: 		req.body.status,
+        expire:         req.body.expire,
+        type:           req.body.type,
+        emailData:      {
+            emailData: Object
+        }
+    };
+
+    if(typeof req.body.interval != 'undefined'){
+        eventObject.interval = req.body.interval;
+    }
+
+    if(typeof req.body.emailData != 'undefined'){
+        eventObject.emailData.to = req.body.emailData.to;
+        eventObject.emailData.from = req.body.emailData.from;
+        eventObject.emailData.cc = req.body.emailData.cc || '';
+        eventObject.emailData.subject = req.body.emailData.subject;
+        eventObject.emailData.sendDate = req.body.emailData.sendDate;
+        eventObject.emailData.receivedDate = req.body.emailData.receivedDate;
+    }
+
+	var newEvent = Event(eventObject);
 
 	newEvent.save(function(err){
 		if(err)
